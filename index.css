@@ -291,6 +291,24 @@ li {
     widows: 3;
   }
 
+  /* 인쇄 페이지 구성 고정 */
+  .page-1 {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  /* 2p: 유현건설 웹페이지 상세 */
+  .page-2 > .block:nth-of-type(1) {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  /* 3p: 유현건설 어플 상세 */
+  .page-2 > .block:nth-of-type(2) {
+    break-after: page;
+    page-break-after: always;
+  }
+
   .page + .page {
     /* 두 번째 .page 앞에 화면용 구분 여백 제거 */
     margin-top: 0;
@@ -323,6 +341,7 @@ li {
 
   h3 {
     font-size: 10.5pt;
+    margin: 0 0 4pt;
   }
 
   p,
@@ -349,14 +368,15 @@ li {
   .intro-hint,
   .hold-note {
     font-size: 9pt;
+    margin: 2pt 0 0;
   }
 
   /* 1열 강제로 길어지던 문제 수정: 인쇄도 2열 유지 */
   .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8pt;
-    margin-top: 6pt;
+    gap: 6pt;
+    margin-top: 4pt;
   }
 
   .grid-3 {
@@ -375,7 +395,18 @@ li {
     /* 카드가 페이지 하단에서 반쯤 잘리는 현상 방지 */
     break-inside: avoid;
     page-break-inside: avoid;
-    padding: 8pt;
+    padding: 7pt;
+  }
+
+  .project-card a {
+    margin-bottom: 4pt !important;
+    font-size: 9pt !important;
+  }
+
+  .project-card p {
+    margin: 3pt 0 0;
+    font-size: 9.2pt;
+    line-height: 1.4;
   }
 
   .grid-2 > .project-card:last-child {
