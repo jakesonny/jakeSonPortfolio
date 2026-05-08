@@ -332,6 +332,14 @@ li {
     widows: 2;
   }
 
+  /* 문단/리스트가 페이지 중간에서 어색하게 잘리지 않도록 보강 */
+  p,
+  ul,
+  li {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
   .block {
     margin-top: 6pt;
     padding-top: 2pt;
@@ -387,6 +395,13 @@ li {
 
   .detail {
     padding: 8pt;
+  }
+
+  /* 상세 본문은 문단 단위로 최대한 함께 이동 */
+  .detail > p,
+  .detail > ul {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
   }
 
   .ending {
