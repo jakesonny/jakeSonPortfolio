@@ -298,26 +298,32 @@ li {
     page-break-after: always;
   }
 
-  /* 2p: LinkBrief 상세 */
+  /* 2p: 프로젝트 소개(요약 카드 5개) — 자체 페이지로 분리해 카드 그리드가 어중간하게 잘리지 않게 함 */
   .page-2 > .block:nth-of-type(1) {
     break-after: page;
     page-break-after: always;
   }
 
-  /* 3p: Pingboard 상세 */
+  /* 3p: LinkBrief 상세 */
   .page-2 > .block:nth-of-type(2) {
     break-after: page;
     page-break-after: always;
   }
 
-  /* 4p: SiteScope 상세 */
+  /* 4p: Pingboard 상세 */
   .page-2 > .block:nth-of-type(3) {
     break-after: page;
     page-break-after: always;
   }
 
-  /* 5p: 유현건설 어플 상세 */
+  /* 5p: SiteScope 상세 */
   .page-2 > .block:nth-of-type(4) {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  /* 6p: 유현건설 어플 상세 */
+  .page-2 > .block:nth-of-type(5) {
     break-after: page;
     page-break-after: always;
   }
